@@ -1,0 +1,122 @@
+/* CSS Variables for Theme */
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #ddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  background: var(--primary-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.sticky-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sticky-nav a:hover {
+  color: yellow;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  box-shadow: 0 0 10px var(--shadow-color);
+  margin: 2rem auto;
+  width: 80%;
+  border: 1px solid var(--border-color);
+}
+
+aside {
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 80%;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 5px var(--shadow-color);
+}
+
+.form-section {
+  width: 80%;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--primary-color);
+  color: white;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sticky-nav ul {
+    flex-direction: column;
+  }
+  .hero, .form-section, aside {
+    width: 95%;
+    padding: 1rem;
+  }
+}
